@@ -82,7 +82,6 @@
             this.ribKhachHang = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
@@ -524,10 +523,6 @@
             this.barButtonItem5.LargeWidth = 90;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,6 +595,5 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.BarEditItem barEditItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel2;
-        private System.Windows.Forms.Timer timer1;
     }
 }
