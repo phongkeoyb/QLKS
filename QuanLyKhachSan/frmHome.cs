@@ -16,6 +16,7 @@ namespace QuanLyKhachSan
         public frmHome()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         string quyenTK = "";
@@ -45,9 +46,9 @@ namespace QuanLyKhachSan
                 btnNhanVien.Enabled = false;
                 btnTaiKhoan.Enabled = false;
             }
+            timer1.Start();
         }
-        
-        
+
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
             Hide();
@@ -64,7 +65,6 @@ namespace QuanLyKhachSan
             }
             else
             {
-
                 frmSearch f = new frmSearch();
                 IsMdiContainer = true;
                 f.MdiParent = this;
@@ -252,6 +252,75 @@ namespace QuanLyKhachSan
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void btnThanhToanPhong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = KiemTraTonTai(typeof(frmCheckOut));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmCheckOut f = new frmCheckOut();
+                IsMdiContainer = true;
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnHoaDon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = KiemTraTonTai(typeof(frmBill));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmBill f = new frmBill();
+                IsMdiContainer = true;
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = KiemTraTonTai(typeof(frmInformation));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmInformation f = new frmInformation();
+                IsMdiContainer = true;
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnBanQuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = KiemTraTonTai(typeof(frmCopyright));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmCopyright f = new frmCopyright();
+                IsMdiContainer = true;
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

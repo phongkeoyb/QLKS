@@ -11,11 +11,12 @@ using DevExpress.XtraEditors;
 
 namespace QuanLyKhachSan
 {
-    public partial class frmBanQuyen : DevExpress.XtraEditors.XtraForm
+    public partial class frmPrint : DevExpress.XtraEditors.XtraForm
     {
-        public frmBanQuyen()
+        public frmPrint()
         {
             InitializeComponent();
         }
+
     }
 }

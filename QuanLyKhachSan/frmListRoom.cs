@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace QuanLyKhachSan

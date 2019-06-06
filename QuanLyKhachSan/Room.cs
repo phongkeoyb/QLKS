@@ -42,6 +42,7 @@ namespace QuanLyKhachSan
             //this.Tenloai = row["TenLoai"].ToString();
             //this.Sosao = row["SoSao"].ToString();
         }
+
         public string Maphong { get => maphong; set => maphong = value; }
         public string Maloai { get => maloai; set => maloai = value; }
         public string Trangthai { get => trangthai; set => trangthai = value; }

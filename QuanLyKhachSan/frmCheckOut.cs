@@ -271,7 +271,7 @@ namespace QuanLyKhachSan
                         commandTTPhong.ExecuteNonQuery();
                         refreshData();
 
-                        string sqlInsertHD = "INSERT INTO hoadon VALUES('" + maTP + "',N'" + ngaylaphd + "', '" + thanhtien + "' )";
+                        string sqlInsertHD = "INSERT INTO hoadon VALUES('" + maTP + "',N'" + ngaylaphd + "', N'" + thanhtien + "' )";
                         SqlCommand commandHoaDon = new SqlCommand(sqlInsertHD, conn);
                         commandHoaDon.ExecuteNonQuery();
 

@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStatistic));
             this.gvThongKe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridThongKe = new DevExpress.XtraGrid.GridControl();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.edtDenNgay = new DevExpress.XtraEditors.DateEdit();
@@ -52,11 +47,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.gvThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridThongKe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -93,7 +83,6 @@
             // 
             // gridThongKe
             // 
-            this.gridThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridThongKe.Location = new System.Drawing.Point(465, 0);
             this.gridThongKe.MainView = this.gvThongKe;
             this.gridThongKe.Name = "gridThongKe";
@@ -101,59 +90,6 @@
             this.gridThongKe.TabIndex = 7;
             this.gridThongKe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvThongKe});
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 27);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(447, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.labelControl1;
-            this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(447, 27);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(123, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(221, 23);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "THÔNG TIN THỐNG KÊ";
-            // 
-            // layoutControl1
-            // 
-            this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(465, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(467, 57);
-            this.layoutControl1.TabIndex = 6;
-            this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.emptySpaceItem1});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(467, 57);
-            this.layoutControlGroup1.TextVisible = false;
             // 
             // gridView1
             // 
@@ -244,6 +180,7 @@
             this.btnThongKe.StyleController = this.layoutControl2;
             this.btnThongKe.TabIndex = 6;
             this.btnThongKe.Text = "THỐNG KÊ";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // edtLuaChon
             // 
@@ -262,6 +199,7 @@
             this.edtLuaChon.Size = new System.Drawing.Size(441, 24);
             this.edtLuaChon.StyleController = this.layoutControl2;
             this.edtLuaChon.TabIndex = 5;
+            this.edtLuaChon.VisibleChanged += new System.EventHandler(this.edtLuaChon_SelectedValueChanged);
             // 
             // labelControl2
             // 
@@ -349,19 +287,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 521);
-            this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.gridThongKe);
             this.Controls.Add(this.layoutControl2);
             this.Name = "frmStatistic";
             this.Text = "Thống kê";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmStatistic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridThongKe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtDenNgay.Properties.CalendarTimeProperties)).EndInit();
@@ -385,11 +318,6 @@
 
         private DevExpress.XtraGrid.Views.Grid.GridView gvThongKe;
         private DevExpress.XtraGrid.GridControl gridThongKe;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.DateEdit edtDenNgay;
